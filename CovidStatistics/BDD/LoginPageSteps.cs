@@ -13,6 +13,7 @@ namespace CovidStatistics.BDD
         [Given(@"I am on the home page")]
         public void GivenIAmOnTheHomePage()
         {
+            CS_Website.MaxmizeWindow();
             CS_Website.CS_LoginPage.NavigateToHome();
         }
 
