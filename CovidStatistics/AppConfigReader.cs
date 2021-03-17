@@ -8,5 +8,7 @@ namespace CovidStatisticsTest
 {
     class AppConfigReader
     {
+        public static readonly string BaseUrl = "https://localhost:44320/";
+        public static readonly string LoginPageUrl = "https://localhost:44320/Identity/Account/Login";
     }
 }
