@@ -19,7 +19,7 @@ namespace CovidStatistics.lib.pages
         public IWebDriver Driver { get; }
 
         // url of page
-        private readonly string _homePageUrl = AppConfigReader.HomePageUrl;
+        private readonly string _homePageUrl = AppConfigReader.BaseUrl;
         //private readonly string _test = "https://google.com";
 
         // elements
