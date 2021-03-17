@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace CovidStatistics.lib.pages
 {
-    class CS_RegisterPage
+    public class CS_RegisterPage
     {
+        public CS_RegisterPage(IWebDriver driver)
+        {
+            Driver = driver;
+        }
+
+        public IWebDriver Driver { get; }
     }
 }
