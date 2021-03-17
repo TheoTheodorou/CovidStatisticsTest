@@ -23,6 +23,10 @@ namespace CovidStatistics.lib.pages
         //private readonly string _test = "https://google.com";
 
         // elements
+        private IWebElement _emailInputElement => Driver.FindElement(By.Id("Input_Email"));
+        private IWebElement _passwordInputElement => Driver.FindElement(By.Id("Input_Password"));
+        private IWebElement _loginInputElement => Driver.FindElement(By.Id("login-submit"));
+        
 
 
         // helper methods for test
@@ -45,6 +49,24 @@ namespace CovidStatistics.lib.pages
             }
         }
 
+        // change later
+        public void GoToLoginPage()
+        {
+            Driver.Navigate().GoToUrl("https://localhost:44320/Identity/Account/Login");
+        }
+        public void FillEmail(string email)
+        {
+            _emailInputElement.SendKeys(email);
+            
+        }
+        public void FillPassword(string password)
+        {
+            _passwordInputElement.SendKeys(password);
+        }
 
+        public void LoginButtonClick()
+        {
+            _loginInputElement.Click();
+        }
     }
 }
