@@ -13,5 +13,6 @@ namespace CovidStatisticsTest
 
         public static readonly string BaseURL = "https://localhost:44320/";
         public static readonly string RecordsURL = "https://localhost:44320/DayRecords";
+        public static readonly string RecordsCreateURL = "https://localhost:44320/DayRecords/Create";
     }
 }

@@ -29,5 +29,41 @@ namespace CovidStatistics.lib.pages
         }
 
         public IWebElement GetRecordsTable() => _table;
+
+        public void NavigateToCreate() => _driver.Navigate().GoToUrl(AppConfigReader.RecordsCreateURL);
+
+        public void EnterRecordDetails()
+        {
+            _driver.FindElement(By.Id("Date")).SendKeys("01019999");
+            _driver.FindElement(By.Id("NumVaccinated")).SendKeys("1000");
+            _driver.FindElement(By.Id("NumDeaths")).SendKeys("1000");
+            _driver.FindElement(By.Id("NumRecovered")).SendKeys("1000");
+            _driver.FindElement(By.Id("NewCases")).SendKeys("1000");
+        }
+
+        public void ClickCreateButton()
+        {
+            _driver.FindElement(By.XPath("/html/body/div/main/div[1]/div/form/div[6]/input")).Click();
+        }
+
+        public void SortTableByDescendingDates()
+        {
+            _driver.Navigate().GoToUrl("https://localhost:44320/DayRecords?sortOrder=date_desc");
+        }
+
+        public IWebElement GetFirstRecordDate()
+        {
+            return _driver.FindElement(By.XPath("/html/body/div/main/table/tbody/tr[1]/td[1]"));
+        }
+
+        public void ClickFirstRecordDelete()
+        {
+            _driver.FindElement(By.XPath("/html/body/div/main/table/tbody/tr[1]/td[6]/a[3]")).Click();
+        }
+
+        public void ClickDeleteButton()
+        {
+            _driver.FindElement(By.ClassName("btn-danger")).Click();
+        }
     }
 }
