@@ -10,14 +10,23 @@
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="89.0.4389.2300" />
     <PackageReference Include="SpecFlow" Version="3.7.38" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.7.38" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.7.38" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Lib\Driver_Config\" />
     <Folder Include="Lib\Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="BDD\records.feature.cs">
+      <DependentUpon>Records.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>
