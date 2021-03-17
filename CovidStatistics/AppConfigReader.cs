@@ -9,9 +9,7 @@ namespace CovidStatisticsTest
 {
     public class AppConfigReader
     {
-        // needs to be inside BDD folder
-        //public static readonly string HomePageUrl = ConfigurationManager.AppSettings["homepage_url"];
-
-        public static readonly string HomePageUrl = "https://localhost:44320/";
+        public static readonly string BaseUrl = "https://localhost:44320/";
+        public static readonly string LoginPageUrl = "https://localhost:44320/Identity/Account/Login";
     }
 }
