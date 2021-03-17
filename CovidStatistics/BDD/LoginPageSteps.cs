@@ -1,6 +1,7 @@
 ﻿using CovidStatistics.lib.pages;
 using NUnit.Framework;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace CovidStatistics.BDD
@@ -46,6 +47,7 @@ namespace CovidStatistics.BDD
         public void WhenIClickTheLoginButton()
         {
             CS_Website.CS_LoginPage.ClickLoginButton();
+            Thread.Sleep(2000);
         }
 
 
@@ -53,6 +55,7 @@ namespace CovidStatistics.BDD
         public void ThenIGoToLoginPage()
         {
             Assert.That(CS_Website.GetPageTitle(), Is.EqualTo("Log in - MvcCovidStatistics"));
+
         }
 
         [Then(@"I go to the home page")]

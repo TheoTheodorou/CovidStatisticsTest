@@ -1,9 +1,9 @@
 ﻿Feature: home
-	Simple calculator for adding two numbers
+As a logged in user 
+I want to be able to see the records link
+so that I can check the status of the world
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+@not logged in
+Scenario: Not logged in
+	Given that I am on home page
+	Then I cannot see the records link
