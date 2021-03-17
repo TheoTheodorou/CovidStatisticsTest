@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CovidStatistics.lib.pages
 {
     public class CS_RegisterPage
     {
-        public IWebDriver _driver { get; }
-
+        private IWebDriver _driver;
         private string _registerPageUrl = AppConfigReader.BaseUrl;
         private IWebElement _registerButton => _driver.FindElement(By.LinkText("Register"));
         private IWebElement _emailField => _driver.FindElement(By.Id("Input_Email"));
@@ -55,8 +55,5 @@ namespace CovidStatistics.lib.pages
         {
             _submitButton.Click();
         }
-
-
-
     }
 }

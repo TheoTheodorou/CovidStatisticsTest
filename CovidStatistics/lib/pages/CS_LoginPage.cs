@@ -7,9 +7,9 @@ namespace CovidStatistics.lib.pages
 {
     public class CS_LoginPage
     {
+        private IWebDriver _driver;
         private IWebElement _loginPageButton => Driver.FindElement(By.LinkText("Login"));
         private IWebElement _loginSubmitButton => Driver.FindElement(By.Id("login-submit"));
-
         private string _loginPageUrl = AppConfigReader.LoginPageUrl;
         private string _baseUrl = AppConfigReader.BaseUrl;
         private IWebElement _emailField => Driver.FindElement(By.Id("Input_Email"));
@@ -17,10 +17,8 @@ namespace CovidStatistics.lib.pages
 
         public CS_LoginPage(IWebDriver driver)
         {
-            Driver = driver;
+            _driver = driver;
         }
-
-        public IWebDriver Driver { get; }
 
         public void NavigateToHome()
         {
@@ -50,7 +48,5 @@ namespace CovidStatistics.lib.pages
         {
             _loginSubmitButton.Click();
         }
-
-
     }
 }

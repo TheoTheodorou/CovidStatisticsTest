@@ -23,4 +23,10 @@
     <Folder Include="Lib\Pages\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="BDD\records.feature.cs">
+      <DependentUpon>Records.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

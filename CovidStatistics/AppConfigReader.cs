@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 
 namespace CovidStatisticsTest
 {
     public static class AppConfigReader
     {
+        //public static readonly string BaseURL = ConfigurationManager.AppSettings["base_url"];
+        //public static readonly string RegisterURL = ConfigurationManager.AppSettings["register_url"];
+        //public static readonly string LoginURL = ConfigurationManager.AppSettings["login_url"];
+        //public static readonly string RecordsURL = ConfigurationManager.AppSettings["records_url"];
+        //public static readonly string DefaultEmail = ConfigurationManager.AppSettings["default_email"];
+        //public static readonly string DefaultPassword = ConfigurationManager.AppSettings["default_password"];
+
+        public static readonly string RecordsURL = "https://localhost:44320/DayRecords";
+        public static readonly string RecordsCreateURL = "https://localhost:44320/DayRecords/Create";
         public static readonly string BaseUrl = "https://localhost:44320/";
         public static readonly string LoginPageUrl = "https://localhost:44320/Identity/Account/Login";
     }
