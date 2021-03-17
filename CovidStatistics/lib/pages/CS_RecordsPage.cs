@@ -19,7 +19,7 @@ namespace CovidStatistics.lib.pages
             _driver = driver;
         }
 
-        public void NavigateToHomePage() => _driver.Navigate().GoToUrl(AppConfigReader.BaseURL);
+        public void NavigateToHomePage() => _driver.Navigate().GoToUrl(AppConfigReader.BaseUrl);
 
         public void Navigate() => _driver.Navigate().GoToUrl(AppConfigReader.RecordsURL);
 

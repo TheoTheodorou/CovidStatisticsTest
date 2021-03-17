@@ -46,7 +46,8 @@ namespace CovidStatistics.BDD
         [AfterScenario]
         public void AfterScenario()
         {
-
+            CS_Website.Driver.Quit();
+            CS_Website.Driver.Dispose();
         }
     }
 }
