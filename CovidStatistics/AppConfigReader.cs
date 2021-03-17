@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 
 namespace CovidStatisticsTest
 {
-    class AppConfigReader
+    public static class AppConfigReader
     {
+        public static readonly string BaseUrl = "https://localhost:44320/";
+        public static readonly string RegisterUrl = ConfigurationManager.AppSettings["register_url"];
     }
 }
