@@ -65,5 +65,11 @@ namespace CovidStatistics.lib.pages
         {
             _driver.FindElement(By.ClassName("btn-danger")).Click();
         }
+
+        public void SearchValidDate()
+        {
+            _driver.FindElement(By.Id("searchDate")).SendKeys("01/01/9999");
+            _driver.FindElement(By.XPath("/html/body/div/main/form/p/input[2]")).Click();
+        }
     }
 }

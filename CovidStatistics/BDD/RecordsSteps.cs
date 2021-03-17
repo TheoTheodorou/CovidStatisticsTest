@@ -63,8 +63,8 @@ namespace CovidStatistics.BDD
 
         }
 
-        [Given(@"I have created a records")]
-        public void GivenIHaveCreatedARecords()
+        [Given(@"I have created a record")]
+        public void GivenIHaveCreatedARecor()
         {
             CS_Website.MaxmizeWindow();
             CS_Website.CS_RecordsPage.NavigateToCreate();
@@ -79,6 +79,13 @@ namespace CovidStatistics.BDD
             CS_Website.CS_RecordsPage.ClickFirstRecordDelete();
             CS_Website.CS_RecordsPage.ClickDeleteButton();
         }
+
+        [When(@"I search with valid date")]
+        public void WhenISearchWithValidDate()
+        {
+            CS_Website.CS_RecordsPage.SearchValidDate();
+        }
+
 
         [Then(@"I should not see the record in the table")]
         public void ThenIShouldNotSeeTheRecordInTheTable()

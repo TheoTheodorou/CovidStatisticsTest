@@ -19,6 +19,13 @@ Scenario: Adding records to table - records shows up
 @records
 Scenario: Deleting records from table - records not show up
 	Given I am on the records page
-	And I have created a records
+	And I have created a record
 	When I delete the records
 	Then I should not see the record in the table
+
+@records
+Scenario: Searching records with valid date - record shows up
+	Given I am on the create records page
+	And I have created a record
+	When I search with valid date
+	Then I should see the record in the table
